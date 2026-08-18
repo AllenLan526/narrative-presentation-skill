@@ -1,6 +1,6 @@
-# Zine Anchor Deck
+# Narrative Presentation Skill
 
-A reusable presentation skill for clean, editorial narrative decks built around one evolving visual anchor. It supports HTML, editable PPTX, independently animated scene compartments, source-derived zine imagery, Lieflat chart scenes, explicit spacing/contrast contracts, and creator-credit manifests.
+A general-purpose presentation skill for clean, editorial narrative decks built around one evolving visual anchor. It supports HTML, editable PPTX, independently animated scene compartments, source-derived imagery, Lieflat chart scenes, explicit spacing/contrast contracts, and creator-credit manifests. The current packaged skill keeps the implementation ID `zine-anchor-deck` for compatibility.
 
 ## Included
 
