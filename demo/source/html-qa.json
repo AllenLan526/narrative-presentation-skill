@@ -1,0 +1,32 @@
+{
+  "errors": [],
+  "slides": [
+    "s01",
+    "s02",
+    "s03",
+    "s04",
+    "s05",
+    "s06",
+    "s07",
+    "s08"
+  ],
+  "activeCount": 1,
+  "sceneIds": [
+    "s02-scene-a",
+    "s03-scene-a",
+    "s03-scene-b",
+    "s03-scene-c",
+    "s04-scene-a",
+    "s05-scene-a",
+    "s06-scene-a",
+    "s07-scene-a",
+    "s08-scene-a"
+  ],
+  "fieldDots": 103,
+  "ballotTicks": 400,
+  "title": "Memory Is Infrastructure — Complex Zine Anchor Deck",
+  "narrowOverflow": {
+    "x": 0,
+    "y": 0
+  }
+}

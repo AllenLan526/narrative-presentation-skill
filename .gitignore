@@ -1,0 +1,4 @@
+.DS_Store
+node_modules/
+demo/source/previews/
+*.inspect.ndjson

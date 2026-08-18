@@ -1,0 +1,26 @@
+# Authors and creator credits
+
+The repository owner assembled and published this package. The following creators and projects materially informed or produced the system and demonstration; credit does not replace their license terms.
+
+## Visual systems
+
+- **@Zeejay0** — creator of the `scenes-gathered-zine-v1-3` and `scene-distillation-zine-v1-3` visual skills. Their paper, quiet-space, torn-boundary, gathered-scene, and distilled-scene principles materially direct the presentation system.
+- **Moxt** — creator location credited by the installed Lieflat Charts system.
+- **larashero3-dotcom** — distributor/repository credit for Lieflat Charts. The demo uses the L14 Hundred Field and L15 Ballot Tally families with the Wire color system.
+
+## Presentation-skill provenance
+
+- **JetBrains/OpenAI** — the Apache-2.0 [slides skill](https://github.com/JetBrains/skills/blob/main/slides/SKILL.md) informed general deck-planning and validation patterns.
+- **Alfonso Graziano** — the MIT [pptx-gen](https://github.com/alfonsograziano/pptx-gen) project informed PowerPoint-generation workflow ideas.
+- **siril9 (Siril)** — the MIT [presentation-skill](https://github.com/siril9/presentation-skill) project informed reusable presentation-skill structure.
+- **Gabberflast** — the MIT [academic-pptx-skill](https://github.com/Gabberflast/academic-pptx-skill) informed presentation QA and source-aware workflow ideas.
+
+## Libraries, typography, and production
+
+- **GreenSock** — creator of [GSAP](https://gsap.com/), referenced as an optional coordinated-motion route by the reusable skill. GSAP is not bundled into the included demo.
+- **Rasmus Andersson** — designer of [Inter](https://github.com/rsms/inter), referenced by the HTML typography stack under the SIL Open Font License 1.1. The font files are not bundled here.
+- **OpenAI** — OpenAI Presentations and `@oai/artifact-tool` were used for the PPTX workflow; OpenAI image generation produced the original raster illustrations used in the demonstration.
+
+## Data status
+
+All numerical values in the demonstration are simulated. They are not a real survey, ballot, or external factual dataset.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zine Anchor Deck"
+  short_description: "Optically balanced zine-and-data presentation decks"
+  default_prompt: "Use $zine-anchor-deck to create a clean presentation with a persistent visual anchor, balanced text-to-image spacing, credited zine scenes, Lieflat charts, and independent motion compartments."

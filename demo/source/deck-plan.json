@@ -1,0 +1,102 @@
+{
+  "format_decision": {
+    "output_format": "other",
+    "requested_outputs": ["html", "pptx"],
+    "confirmed": true,
+    "playback_environment": "Modern browser for HTML; PowerPoint desktop for PPTX",
+    "motion_required": true,
+    "pptx_motion_fallback": "Static editable PPTX with speaker-note animation cues; native timing tree not claimed"
+  },
+  "presentation": {
+    "title": "The Market That Remembers: Memory Is Infrastructure",
+    "audience": "Design, museum, and place-making stakeholders",
+    "purpose": "Demonstrate a complex anchored narrative that turns human scenes and simulated evidence into a decision framework",
+    "governing_message": "Change can remain legible when it protects the patterns through which people recognize and access a place"
+  },
+  "visual_anchor": {
+    "identity": "An irregular torn market threshold",
+    "geometry": "Aperture, seam, boundary, baseline, and open path",
+    "material": "Warm paper, charcoal dry ink, fibrous edge",
+    "accent_hue": "Wire HERO orange #F5572F",
+    "continuity_rule": "Compact aperture → reading seam → three beats → constriction → 64-mark boundary → ballot baseline → decision path → open passage"
+  },
+  "spacing_system": {
+    "base_unit_px": 8,
+    "page_margin_px": 72,
+    "tight_gap_px": 16,
+    "regular_gap_px": 28,
+    "major_gap_px": 48,
+    "min_text_image_clearance_px": 24,
+    "peer_gap_tolerance_ratio": 1.25
+  },
+  "contrast_system": {
+    "paper": "#F0F0EE",
+    "ink": "#1F1E1C",
+    "metadata_ink": "#504F4B",
+    "data_gray": "#8F8E86",
+    "normal_text_min_ratio": 4.5,
+    "large_text_min_ratio": 3,
+    "small_metadata_target_ratio": 7,
+    "image_overlay_rule": "Use a solid paper or ink field unless the complete rendered text run is verified against the worst-case image background"
+  },
+  "creator_credits": [
+    {"work":"Zine visual direction","creator":"Zeejay0","usage":"Paper, quiet-space, torn-boundary, and scene art direction","location":"HTML colophon and PPTX final slide/notes","license_or_terms":"Creator credit retained; no watermark"},
+    {"work":"Lieflat Charts","creator":"Moxt / larashero3-dotcom","usage":"L14 Hundred Field, L15 Ballot Tally, and Wire tokens","location":"HTML colophon and PPTX final slide/notes","license_or_terms":"PolyForm Noncommercial 1.0.0; noncommercial demonstration"},
+    {"work":"Inter","creator":"Rasmus Andersson","usage":"Typography reference and HTML font stack","location":"HTML colophon and PPTX final slide","license_or_terms":"SIL Open Font License 1.1"},
+    {"work":"OpenAI Presentations and image generation","creator":"OpenAI","usage":"PPTX authoring workflow and original raster illustrations","location":"HTML colophon and PPTX final slide/notes","license_or_terms":"Tool attribution for demonstration"}
+  ],
+  "slides": [
+    {
+      "id":"s01","title":"A market is remembered through patterns, not monuments","role":"opening","layout_family":"asymmetric-island","anchor_state":"compact aperture",
+      "spacing_contract":{"balance_mode":"intentional-asymmetry","title_reserve":"lowest rendered title ink + regular gap before subtitle; major gutter before market subject","text_image_clearance_px":56,"peer_gap_tier":"regular","spacing_exceptions":[{"relation":"left copy field to right-weighted market island","purpose":"Create forward narrative pull while preserving a full quiet gutter"}]},
+      "source_notes":["Original generated illustration; no external factual claim"],
+      "scenes":[{"id":"s01-scene-a","role":"primary visual","engine":"native","subject":"Market island around a compact orange threshold","geometry":"right 58% with a protected left copy field","anchor_relationship":"contains the first compact aperture","alt_text":"Abstract paper market forms gather around a compact orange opening.","animation":{"trigger":"with-slide","entrance":"mask reveal","emphasis":"none","exit":"none","duration_ms":650,"reduced_motion":"show final state"}}]
+    },
+    {
+      "id":"s02","title":"Four layers make the pattern legible","role":"model","layout_family":"layered-seam","anchor_state":"vertical reading seam",
+      "spacing_contract":{"balance_mode":"neutral","title_reserve":"lowest rendered title ink + major gap before the four-layer model","text_image_clearance_px":48,"peer_gap_tier":"regular","spacing_exceptions":[]},
+      "source_notes":["Conceptual framework created for this demonstration; no external factual claim"],
+      "scenes":[{"id":"s02-scene-a","role":"conceptual model","engine":"native","subject":"Objects, rituals, routes, and access arranged along an orange seam","geometry":"four balanced horizontal bands below title reserve","anchor_relationship":"the threshold becomes a reading seam","alt_text":"Four layers—objects, rituals, routes, and access—align along an orange seam.","animation":{"trigger":"with-slide","entrance":"sequential reveal","emphasis":"seam connects layers","exit":"none","duration_ms":760,"reduced_motion":"show final state"}}]
+    },
+    {
+      "id":"s03","title":"Three everyday rituals keep recognition alive","role":"human context","layout_family":"staggered-scenes","anchor_state":"three orange beats",
+      "spacing_contract":{"balance_mode":"intentional-asymmetry","title_reserve":"lowest rendered title ink + major gap before all scene subjects","text_image_clearance_px":48,"peer_gap_tier":"major","spacing_exceptions":[{"relation":"middle exchange scene raised 24 px","purpose":"Create a three-beat rhythm while keeping peer gutters equal"}]},
+      "source_notes":["Original generated triptych illustration; no external factual claim"],
+      "scenes":[
+        {"id":"s03-scene-a","role":"stall ritual","engine":"native","subject":"Vendor stall and baskets","geometry":"left compartment","anchor_relationship":"first orange beat","alt_text":"A simplified vendor stall beneath a torn canopy.","animation":{"trigger":"on-enter","entrance":"rise and fade","emphasis":"none","exit":"none","duration_ms":520,"reduced_motion":"show final state"}},
+        {"id":"s03-scene-b","role":"exchange ritual","engine":"native","subject":"Hands exchanging a wrapped parcel","geometry":"raised center compartment","anchor_relationship":"second orange beat","alt_text":"Two abstract hands exchange a wrapped parcel.","animation":{"trigger":"after-previous","entrance":"rise and fade","emphasis":"none","exit":"none","duration_ms":520,"reduced_motion":"show final state"}},
+        {"id":"s03-scene-c","role":"passage ritual","engine":"native","subject":"Figure following a market lane","geometry":"right compartment","anchor_relationship":"third orange beat","alt_text":"A figure follows a narrow market passage.","animation":{"trigger":"after-previous","entrance":"rise and fade","emphasis":"none","exit":"none","duration_ms":520,"reduced_motion":"show final state"}}
+      ]
+    },
+    {
+      "id":"s04","title":"A narrowed route makes every other layer fragile","role":"tension","layout_family":"torn-window","anchor_state":"constricted seam",
+      "spacing_contract":{"balance_mode":"neutral","title_reserve":"lowest rendered title ink + major gap before the dark market mass","text_image_clearance_px":48,"peer_gap_tier":"major","spacing_exceptions":[]},
+      "source_notes":["Original generated illustration; no external factual claim"],
+      "scenes":[{"id":"s04-scene-a","role":"tension visual","engine":"native","subject":"Market fragments compress around a narrow orange route","geometry":"wide image below a protected title field","anchor_relationship":"the seam constricts without closing","alt_text":"Charcoal market fragments press around a narrow orange route.","animation":{"trigger":"with-slide","entrance":"horizontal clip reveal","emphasis":"route narrows","exit":"none","duration_ms":720,"reduced_motion":"show final state"}}]
+    },
+    {
+      "id":"s05","title":"Preservation leads 64 to 23 in this simulated pulse","role":"evidence","layout_family":"editorial-field","anchor_state":"boundary after the 64th mark",
+      "spacing_contract":{"balance_mode":"neutral","title_reserve":"lowest rendered left-column title ink + regular gap before metric","text_image_clearance_px":48,"peer_gap_tier":"regular","spacing_exceptions":[]},
+      "source_notes":["Simulated demonstration data: preserve 64%, redevelop 23%, undecided 13%; not a real survey"],
+      "scenes":[{"id":"s05-scene-a","role":"quantitative conclusion","engine":"lieflat","subject":"One hundred marks split 64/23/13","geometry":"right 58% chart field with left conclusion column","anchor_relationship":"orange cluster resolves the 64% boundary","alt_text":"One hundred marks show 64 for preservation, 23 for redevelopment, and 13 undecided.","credit_refs":["Lieflat Charts / Moxt / larashero3-dotcom"],"chart_contract":{"finding":"Preservation exceeds redevelopment by 41 percentage points in simulated data","system":"lupi-editorial","template_id":"L14","gallery_file":"templates/lupi-gallery.html","card_title":"Hundred Field","color_system":"wire","candidate_audit":[{"template_id":"L14","decision":"selected","reason":"Countable marks make the 64/23/13 composition exact"},{"template_id":"F4","decision":"rejected","reason":"Tick Donut slows comparison between the two leading shares"},{"template_id":"L5","decision":"rejected","reason":"Radial convergence introduces relationship geometry absent from the data"}]},"animation":{"trigger":"on-click","entrance":"template-faithful phyllotaxis stagger","emphasis":"preservation resolves first","exit":"none","duration_ms":760,"reduced_motion":"show all marks immediately"}}]
+    },
+    {
+      "id":"s06","title":"Safeguards matter more than a larger footprint","role":"evidence","layout_family":"ballot-ledger","anchor_state":"orange ballot baseline",
+      "spacing_contract":{"balance_mode":"neutral","title_reserve":"lowest rendered title ink + major gap before the ballot rows","text_image_clearance_px":48,"peer_gap_tier":"regular","spacing_exceptions":[]},
+      "source_notes":["Simulated multi-select demonstration data: affordable stalls 72%, vendor access 61%, safer infrastructure 54%, maximize footprint 22%; not a real survey"],
+      "scenes":[{"id":"s06-scene-a","role":"priority comparison","engine":"lieflat","subject":"Four independent ballot rows of one hundred ticks","geometry":"wide chart with a right-side interpretation note","anchor_relationship":"the hero row becomes an orange baseline","alt_text":"Four ballot rows show affordable stalls at 72%, vendor access at 61%, safer infrastructure at 54%, and maximizing footprint at 22%.","credit_refs":["Lieflat Charts / Moxt / larashero3-dotcom"],"chart_contract":{"finding":"The three access-and-continuity safeguards all outrank maximizing footprint","system":"lupi-editorial","template_id":"L15","gallery_file":"templates/lupi-gallery.html","card_title":"Ballot Tally","color_system":"wire","candidate_audit":[{"template_id":"L15","decision":"selected","reason":"One tick per percentage point preserves independent multi-select denominators"},{"template_id":"F5","decision":"rejected","reason":"Tick rows compare values but lose the ballot-like respondent cadence"},{"template_id":"L2","decision":"rejected","reason":"Dot cascade requires short vertical labels and creates unnecessary descent geometry"}]},"animation":{"trigger":"on-click","entrance":"template-faithful row stagger","emphasis":"affordable stalls row leads","exit":"none","duration_ms":900,"reduced_motion":"show all ticks immediately"}}]
+    },
+    {
+      "id":"s07","title":"Change is viable when it protects rhythm, access, and adaptation","role":"decision framework","layout_family":"three-part-path","anchor_state":"three-part decision path",
+      "spacing_contract":{"balance_mode":"neutral","title_reserve":"lowest rendered title ink + major gap before the decision path","text_image_clearance_px":48,"peer_gap_tier":"major","spacing_exceptions":[]},
+      "source_notes":["Decision framework synthesized from the demonstration narrative and simulated evidence"],
+      "scenes":[{"id":"s07-scene-a","role":"decision framework","engine":"native","subject":"Three linked principles: protect rhythm, retain access, permit adaptation","geometry":"three balanced stations along a rising orange path","anchor_relationship":"the seam becomes an actionable path","alt_text":"An orange path connects three principles: protect rhythm, retain access, and permit adaptation.","animation":{"trigger":"with-slide","entrance":"path then stations","emphasis":"principles resolve in order","exit":"none","duration_ms":820,"reduced_motion":"show final state"}}]
+    },
+    {
+      "id":"s08","title":"Keep the threshold open enough for memory to move","role":"resolution","layout_family":"open-passage","anchor_state":"open passage",
+      "spacing_contract":{"balance_mode":"neutral","title_reserve":"lowest rendered title ink + major gap before the open-passage image","text_image_clearance_px":48,"peer_gap_tier":"major","spacing_exceptions":[]},
+      "source_notes":["Original generated illustration; visible creator colophon included"],
+      "scenes":[{"id":"s08-scene-a","role":"closing proposition","engine":"native","subject":"Open orange route through calm market forms","geometry":"large image below protected title field with compact colophon","anchor_relationship":"the threshold opens and stabilizes","alt_text":"An open orange route remains between calm charcoal market forms.","animation":{"trigger":"with-slide","entrance":"soft reveal","emphasis":"none","exit":"none","duration_ms":650,"reduced_motion":"show final state"}}]
+    }
+  ]
+}
