@@ -1,16 +1,20 @@
-# Narrative Presentation Skill
+# Narrative Presentation and Poster Skills
 
-A general-purpose presentation skill for clean, editorial narrative decks built around one evolving visual anchor. It supports HTML, editable PPTX, independently animated scene compartments, source-derived imagery, Lieflat chart scenes, explicit spacing/contrast contracts, and creator-credit manifests. The current packaged skill keeps the implementation ID `zine-anchor-deck` for compatibility.
+A public collection of editorial narrative-design skills for presentations and one-page posters. Both systems use a clear visual anchor, active quiet space, independently editable compartments, explicit spacing contracts, and separate creator-credit manifests.
 
-## Included
+## Skills
 
-- `skill/` — the reusable `zine-anchor-deck` skill and validation references.
-- `demo/index.html` — an eight-slide interactive HTML demonstration.
-- `demo/zine-anchor-complex-demo.pptx` — an editable static-final-state PowerPoint with animation cues and sources in speaker notes.
-- `demo/source/` — the validated deck plan, PPTX build source, and browser QA record.
-- `demo/prompt.md` — the prompt used to generate the demonstration.
+- [`skill/`](skill/) — `$zine-anchor-deck`, the original presentation skill. Its implementation ID and legacy path remain unchanged for compatibility.
+- [`skills/create-editable-zine-poster/`](skills/create-editable-zine-poster/) — `$create-editable-zine-poster`, a one-page poster skill with Canva, semantic HTML/CSS, modular SVG, and editable vector-PDF routes.
+
+## Demonstrations
+
+- [`demo/`](demo/) — the original eight-slide interactive HTML and editable PPTX demonstration.
+- [`demos/create-editable-zine-poster/`](demos/create-editable-zine-poster/) — an editable HTML/SVG poster, browser-generated vector PDF, validated poster plan, rendering source, preview, and separate provenance file.
 
 Open `demo/index.html` directly in a modern browser. Use the arrow keys or spacebar to move between slides and `F` for fullscreen.
+
+Open `demos/create-editable-zine-poster/design-as-layers.html` directly to inspect the poster. To rebuild its preview and PDF, install the demo dependency and run `npm run render` inside that directory.
 
 ## Design principles
 
@@ -20,6 +24,8 @@ Open `demo/index.html` directly in a modern browser. Use the arrow keys or space
 - Normal text targets at least 4.5:1 contrast; small metadata targets 7:1 where practical.
 - Quantitative scenes preserve their declared Lieflat template and data contract.
 - HTML supports reduced motion; PPTX documents honest static fallback behavior.
+- Posters retain live type, named modules, separately editable vector geometry, and a single clear visual route.
+- Poster credits and design-method sources remain outside the poster face.
 
 ## Validation
 
@@ -29,6 +35,8 @@ The included demo passed:
 - full-slide and contact-sheet visual inspection;
 - exported PPTX rendering inspection;
 - PowerPoint canvas-overflow validation.
+- poster-plan schema validation and rendered DOM collision, inset, transform, and overflow checks;
+- PDF object inspection confirming live text/vector content rather than a full-page screenshot.
 
 ## Credits and provenance
 

@@ -34,3 +34,7 @@ Inter is by **Rasmus Andersson** and is licensed under the SIL Open Font License
 ## OpenAI
 
 The demonstration's original illustrations were created with OpenAI image generation. The PowerPoint was authored through OpenAI Presentations using `@oai/artifact-tool`.
+
+## Editable poster research references
+
+The poster skill cites official Canva developer documentation and public poster/chart projects including PosterLLaVA, Grid2Poster, Observable Plot, RAWGraphs, and Charticulator as research references. No code, templates, artwork, or datasets from those projects are bundled into the poster demonstration. Observable Plot identifies its repository license as ISC; all other upstream projects and services retain their own terms.

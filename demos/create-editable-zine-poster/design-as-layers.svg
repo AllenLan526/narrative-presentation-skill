@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1800" viewBox="0 0 1280 1800">
+  <rect width="1280" height="1800" fill="#F3EFE6"/>
+
+  <g id="title-stack" fill="#1C1B1A" font-family="Helvetica Neue, Arial, sans-serif">
+    <text x="88" y="106" font-size="24" font-weight="700" letter-spacing="4">MODULAR POSTER / 01</text>
+    <text x="82" y="252" font-size="126" font-weight="900" letter-spacing="-6">DESIGN</text>
+    <text x="82" y="370" font-size="126" font-weight="900" letter-spacing="-6">AS LAYERS</text>
+    <text x="88" y="446" font-size="31" font-weight="500">A one-page system that keeps the story</text>
+    <text x="88" y="486" font-size="31" font-weight="500">tactile - and the parts movable.</text>
+  </g>
+
+  <g id="anchor-seam" fill="#E4472E">
+    <path d="M878 78 L928 88 L913 224 L943 342 L919 514 L946 641 L917 828 L951 1008 L924 1186 L953 1372 L927 1548 L947 1718 L888 1728 L905 1560 L879 1378 L902 1196 L872 1016 L900 832 L868 646 L896 510 L871 338 L900 220 Z"/>
+  </g>
+
+  <g id="exploded-stack" font-family="Helvetica Neue, Arial, sans-serif">
+    <text x="88" y="616" fill="#1C1B1A" font-size="21" font-weight="800" letter-spacing="3">EXPLODED POSTER ANATOMY</text>
+
+    <g id="band-message">
+      <path id="band-message-shape" d="M88 660 L760 660 L794 700 L766 772 L104 772 L78 710 Z" fill="#FFFDF7" stroke="#1C1B1A" stroke-width="4"/>
+      <text id="band-message-title" x="150" y="714" fill="#1C1B1A" font-size="36" font-weight="900">MESSAGE</text>
+      <text id="band-message-class" x="720" y="714" text-anchor="end" fill="#1C1B1A" font-size="22" font-weight="600">LIVE TYPE</text>
+      <text id="band-message-note" x="150" y="746" fill="#1C1B1A" font-size="15" font-weight="700" letter-spacing="2">01 / WHAT THE VIEWER REMEMBERS</text>
+    </g>
+
+    <g id="band-anchor">
+      <path id="band-anchor-shape" d="M120 788 L832 788 L806 900 L104 900 L76 844 Z" fill="#E4472E"/>
+      <text id="band-anchor-title" x="156" y="842" fill="#FFFDF7" font-size="36" font-weight="900">ANCHOR</text>
+      <text id="band-anchor-class" x="770" y="842" text-anchor="end" fill="#FFFDF7" font-size="22" font-weight="600">NATIVE SHAPE</text>
+      <text id="band-anchor-note" x="156" y="874" fill="#FFFDF7" font-size="15" font-weight="700" letter-spacing="2">02 / THE RELATION THAT HOLDS IT TOGETHER</text>
+    </g>
+
+    <g id="band-evidence">
+      <path id="band-evidence-shape" d="M84 924 L786 924 L824 966 L802 1052 L104 1052 L68 1010 Z" fill="#1C1B1A"/>
+      <text id="band-evidence-title" x="160" y="980" fill="#F3EFE6" font-size="36" font-weight="900">EVIDENCE</text>
+      <text id="band-evidence-class" x="750" y="980" text-anchor="end" fill="#F3EFE6" font-size="22" font-weight="600">DATA / IMAGE</text>
+      <text id="band-evidence-note" x="160" y="1018" fill="#F3EFE6" font-size="15" font-weight="700" letter-spacing="2">03 / THE THING THAT MAKES IT TRUE</text>
+    </g>
+
+    <g id="band-handoff">
+      <path id="band-handoff-shape" d="M110 1074 L846 1074 L816 1190 L98 1190 L72 1122 Z" fill="#FFFDF7" stroke="#1C1B1A" stroke-width="4"/>
+      <text id="band-handoff-title" x="160" y="1132" fill="#1C1B1A" font-size="36" font-weight="900">HANDOFF</text>
+      <text id="band-handoff-class" x="760" y="1132" text-anchor="end" fill="#1C1B1A" font-size="22" font-weight="600">SOURCE + ACTION</text>
+      <text id="band-handoff-note" x="160" y="1164" fill="#1C1B1A" font-size="15" font-weight="700" letter-spacing="2">04 / WHERE THE VIEWER CAN KEEP WORKING</text>
+    </g>
+  </g>
+
+  <g id="module-ledger" font-family="Helvetica Neue, Arial, sans-serif" fill="#1C1B1A">
+    <text x="88" y="1332" font-size="21" font-weight="800" letter-spacing="3">MODULE LEDGER</text>
+    <line x1="88" y1="1354" x2="710" y2="1354" stroke="#1C1B1A" stroke-width="3"/>
+    <rect x="88" y="1382" width="20" height="20" fill="#E4472E"/>
+    <text x="130" y="1400" font-size="24" font-weight="800">LIVE TYPE</text>
+    <text x="486" y="1400" font-size="18" font-weight="600">REWRITE</text>
+    <rect x="88" y="1432" width="20" height="20" fill="#E4472E"/>
+    <text x="130" y="1450" font-size="24" font-weight="800">NATIVE SHAPES</text>
+    <text x="486" y="1450" font-size="18" font-weight="600">MOVE / RECOLOR</text>
+    <rect x="88" y="1482" width="20" height="20" fill="#E4472E"/>
+    <text x="130" y="1500" font-size="24" font-weight="800">DATA MODULE</text>
+    <text x="486" y="1500" font-size="18" font-weight="600">REMAP</text>
+    <rect x="88" y="1532" width="20" height="20" fill="#E4472E"/>
+    <text x="130" y="1550" font-size="24" font-weight="800">SWAPPABLE IMAGE</text>
+    <text x="486" y="1550" font-size="18" font-weight="600">REPLACE</text>
+  </g>
+
+  <g id="action" font-family="Helvetica Neue, Arial, sans-serif" fill="#1C1B1A">
+    <text x="985" y="1388" font-size="19" font-weight="800" letter-spacing="3">THE TEST</text>
+    <text x="985" y="1434" font-size="30" font-weight="900">MOVE ONE</text>
+    <text x="985" y="1474" font-size="30" font-weight="900">PIECE.</text>
+    <text x="985" y="1514" font-size="30" font-weight="900">THE STORY</text>
+    <text x="985" y="1554" font-size="30" font-weight="900">STILL HOLDS.</text>
+  </g>
+
+  <g id="edition-marker" font-family="Helvetica Neue, Arial, sans-serif" fill="#1C1B1A">
+    <line x1="88" y1="1660" x2="1192" y2="1660" stroke="#1C1B1A" stroke-width="3"/>
+    <text x="88" y="1706" font-size="17" font-weight="800" letter-spacing="1.4">01 / MODULAR DEMO</text>
+  </g>
+</svg>
