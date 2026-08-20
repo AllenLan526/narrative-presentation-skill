@@ -7,9 +7,12 @@ Use one chart per independent conclusion. Treat a chart as evidence inside the p
 1. Use a Canva chart data field in an autofillable Brand Template for repeatable, data-swappable posters.
 2. Use a native Canva chart for a one-off when the editor exposes the needed chart type.
 3. Use native shapes plus live labels for small bars, dots, unit fields, timelines, or annotated comparisons.
-4. Use one SVG chart compartment only for complex geometry that cannot reasonably be rebuilt. Keep title, labels, units, finding, and source native outside it.
+4. Invoke `$scientific-figure-making` for publication-ready static Matplotlib bars, trends, scatterplots, heatmaps, or multi-panel figures. Export SVG or PDF plus a high-DPI fallback when required.
+5. Use one SVG chart compartment only for other complex geometry that cannot reasonably be rebuilt. Keep title, labels, units, finding, and source native outside it.
 
 Canva chart Autofill accepts structured tabular rows and has documented row/column limits; treat the capability as preview where Canva marks it preview. Query the current template dataset before filling it.
+
+Do not invoke `$scientific-figure-making` for interactive web visualization, exploratory-only analysis, dominant 3D/GIS work, or Illustrator/Figma-first infographics. For its route, retain source data and Matplotlib code, import the export as one `single_vector` module, and rebuild from source rather than editing marks after export.
 
 ## Selection rules
 
@@ -35,6 +38,8 @@ Record:
 - color semantics;
 - native construction class;
 - fallback when the Canva route cannot represent it.
+
+For a scientific figure, also record `construction_route: scientific-figure`, `source_data`, `source_code`, `publication_target`, and `export_formats` containing `svg` or `pdf`.
 
 Use deterministic data in demos. Label invented values `Illustrative data` and do not cite them as findings.
 

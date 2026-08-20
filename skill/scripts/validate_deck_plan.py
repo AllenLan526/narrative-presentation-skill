@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 FORMATS = {"html", "pptx", "google-slides", "keynote", "pdf", "video", "other"}
-ENGINES = {"gathered", "distilled", "lieflat", "native"}
+ENGINES = {"gathered", "distilled", "lieflat", "scientific-figure", "native"}
 BALANCE_MODES = {"neutral", "intentional-asymmetry"}
 GAP_TIERS = {"tight", "regular", "major"}
 ANIMATION_FIELDS = {
@@ -170,6 +170,20 @@ def validate(data):
                         require(bool(chart.get("candidate_shortfall_reason")),
                                 f"{scene_prefix}.chart_contract needs 3 candidates or candidate_shortfall_reason", errors)
 
+            if engine == "scientific-figure":
+                figure = scene.get("figure_contract")
+                require(isinstance(figure, dict), f"{scene_prefix}.figure_contract is required", errors)
+                if isinstance(figure, dict):
+                    for field in ("finding", "figure_type", "publication_target", "source_data", "source_code"):
+                        require(bool(figure.get(field)), f"{scene_prefix}.figure_contract.{field} is required", errors)
+                    export_formats = figure.get("export_formats")
+                    require(isinstance(export_formats, list) and export_formats,
+                            f"{scene_prefix}.figure_contract.export_formats must be a non-empty list", errors)
+                    if isinstance(export_formats, list):
+                        normalized_formats = {str(item).lower() for item in export_formats}
+                        require("svg" in normalized_formats or "pdf" in normalized_formats,
+                                f"{scene_prefix}.figure_contract.export_formats must include svg or pdf", errors)
+
             animation = scene.get("animation")
             if motion_required:
                 require(isinstance(animation, dict), f"{scene_prefix}.animation is required", errors)
@@ -190,6 +204,9 @@ def validate(data):
         require("lieflat" in credits_text, "lieflat scenes require a Lieflat Charts credit", errors)
         require("moxt" in credits_text or "larashero3-dotcom" in credits_text,
                 "Lieflat Charts credit must name Moxt or larashero3-dotcom", errors)
+    if "scientific-figure" in engines_used:
+        require("scientific-figure-making" in credits_text,
+                "scientific-figure scenes require a scientific-figure-making production credit", errors)
 
     return errors
 

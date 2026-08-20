@@ -84,3 +84,9 @@ Write a concise, machine-checkable `poster-plan.json` before production.
 - Give every module alt text and a source note, including decorative modules.
 - Record every deliberate spacing deviation with `relation` and narrative `purpose`.
 - Keep creator credits separate from data, claim, photo, and asset sources.
+
+## Chart Contract
+
+Every module whose `kind` is `chart` must include a `chart_contract` with `finding`, `construction_route`, `data_source`, and `units`. Use `canva-template`, `canva-native`, `native-shapes`, `scientific-figure`, or `single-vector` as the construction route.
+
+For `scientific-figure`, also record `publication_target`, `source_data`, `source_code`, and `export_formats` containing `svg` or `pdf`; set the module editability to `single_vector`. Preserve the data and Matplotlib source with the rebuild files and keep poster-level findings, captions, and sources native when practical.

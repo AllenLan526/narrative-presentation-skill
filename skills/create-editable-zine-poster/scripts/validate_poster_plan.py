@@ -19,6 +19,7 @@ EDITABILITY = {
     "single_vector",
     "fixed_raster",
 }
+CHART_ROUTES = {"canva-template", "canva-native", "native-shapes", "scientific-figure", "single-vector"}
 
 
 def fail(errors: list[str], message: str) -> None:
@@ -143,6 +144,28 @@ def validate(path: Path) -> list[str]:
             fail(errors, f"{prefix}.bounds_basis must be 'rendered_ink' for text")
         if module.get("editability") not in EDITABILITY:
             fail(errors, f"{prefix}.editability must be one of {sorted(EDITABILITY)}")
+        if module.get("kind") == "chart":
+            chart = module.get("chart_contract")
+            if not isinstance(chart, dict):
+                fail(errors, f"{prefix}.chart_contract must be an object")
+            else:
+                for key in ("finding", "data_source", "units"):
+                    require_text(chart, key, f"{prefix}.chart_contract", errors)
+                construction_route = chart.get("construction_route")
+                if construction_route not in CHART_ROUTES:
+                    fail(errors, f"{prefix}.chart_contract.construction_route must be one of {sorted(CHART_ROUTES)}")
+                if construction_route == "scientific-figure":
+                    for key in ("publication_target", "source_data", "source_code"):
+                        require_text(chart, key, f"{prefix}.chart_contract", errors)
+                    export_formats = chart.get("export_formats")
+                    if not isinstance(export_formats, list) or not export_formats:
+                        fail(errors, f"{prefix}.chart_contract.export_formats must be a non-empty array")
+                    else:
+                        normalized_formats = {str(item).lower() for item in export_formats}
+                        if "svg" not in normalized_formats and "pdf" not in normalized_formats:
+                            fail(errors, f"{prefix}.chart_contract.export_formats must include svg or pdf")
+                    if module.get("editability") != "single_vector":
+                        fail(errors, f"{prefix}.editability must be single_vector for scientific-figure")
         z = module.get("z")
         if not isinstance(z, int) or isinstance(z, bool):
             fail(errors, f"{prefix}.z must be an integer")

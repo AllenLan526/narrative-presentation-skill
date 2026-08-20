@@ -1,6 +1,28 @@
-# Lieflat Data Scenes
+# Data Scene Routing
 
-Read the original `$lieflat-charts` skill before building any chart. This reference only explains how to place a Lieflat chart inside a zine-anchor deck.
+Choose one primary engine per finding:
+
+| Need | Route |
+|---|---|
+| Publication-ready static bars, trends, scatterplots, heatmaps, or multi-panel figures | Invoke `$scientific-figure-making` |
+| Template-led narrative data illustration or interactive relationship view | Invoke `$lieflat-charts` |
+| Simple chart whose marks must remain editable in PPTX/Slides | Use native chart objects when the encoding stays faithful |
+
+Do not invoke `$scientific-figure-making` for interactive web visualization, exploratory-only plots, dominant 3D/GIS work, or Illustrator/Figma-first infographics. Do not invoke `$lieflat-charts` merely to restyle a scientific figure.
+
+## Scientific figure route
+
+- Open only the relevant `$scientific-figure-making` reference for the requested figure family.
+- Preserve the canonical data and Matplotlib source beside the deck rebuild source.
+- Export SVG or PDF for vector placement and a high-DPI PNG only when the target format needs a raster fallback.
+- Place the figure as one named scene compartment. Keep slide-level title, finding, source, and optional annotation native when that avoids duplicated labels.
+- Rebuild from the figure source instead of editing exported marks by hand.
+- Treat a static scientific figure as static in HTML; choose another route if hover, filtering, or live data is required.
+- Record a `figure_contract` with the finding, figure type, publication target, source data, source code, and export formats.
+
+## Lieflat route
+
+Read the original `$lieflat-charts` skill before building a Lieflat chart. The remaining guidance explains how to place it inside a zine-anchor deck.
 
 ## Route
 

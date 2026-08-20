@@ -88,7 +88,7 @@ Write a machine-checkable `deck-plan.json` before authoring. Keep prose concise;
 - Set `format_decision.confirmed` to `true` only after the first format gate is answered.
 - Use a unique slide ID and unique scene ID throughout the deck.
 - Use one to three scenes per slide; prefer one.
-- Use `gathered`, `distilled`, `lieflat`, or `native` as the scene engine.
+- Use `gathered`, `distilled`, `lieflat`, `scientific-figure`, or `native` as the scene engine.
 - Give every slide an anchor state.
 - Define one deck-wide `spacing_system`. Keep `tight_gap_px < regular_gap_px < major_gap_px`, use at least 24 px minimum text-to-image clearance, and keep the peer-gap tolerance ratio between 1.0 and 1.5.
 - Give every slide a `spacing_contract`. Use `neutral` or `intentional-asymmetry` as `balance_mode`; name the title reserve rule, expected text-to-image clearance, and peer-gap tier.
@@ -124,3 +124,22 @@ Every scene whose engine is `lieflat` must also include:
 ```
 
 If fewer than three honest candidates exist, include `candidate_shortfall_reason`.
+
+## Scientific Figure Contract
+
+Every scene whose engine is `scientific-figure` must also include:
+
+```json
+{
+  "figure_contract": {
+    "finding": "One independent conclusion",
+    "figure_type": "grouped-bars",
+    "publication_target": "conference presentation and PDF handout",
+    "source_data": "data/results.csv",
+    "source_code": "figures/result_overview.py",
+    "export_formats": ["svg", "png-300dpi"]
+  }
+}
+```
+
+Include `svg` or `pdf` in `export_formats`. Keep the data, code, and exports traceable to one another. Add `$scientific-figure-making` to `creator_credits` as an invoked production system; when creator metadata is absent, record that it is not declared instead of inventing authorship.

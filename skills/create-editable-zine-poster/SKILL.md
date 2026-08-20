@@ -103,13 +103,15 @@ Generated art must contain no titles, captions, labels, chart axes, legends, or 
 
 Read [references/data-modules.md](references/data-modules.md) whenever quantitative information appears.
 
+- Invoke `$scientific-figure-making` when a research/data poster needs a publication-ready static Matplotlib figure—especially grouped bars, trends, scatterplots, heatmaps, multi-panel figures, or explicit SVG/PDF/high-DPI output. Do not invoke it for interactive web charts, exploratory-only plots, dominant GIS/3D work, or illustration-first infographics.
+- Use Canva-native charts or native marks instead when element-level editing or repeated Autofill data swaps are the primary requirement.
 - Give each chart one independent conclusion.
 - Choose the encoding from the data shape; do not imitate an attractive chart from memory.
 - Prefer Canva chart fields for repeatable templates; otherwise use a native Canva chart or a small group of shapes and live labels.
 - Keep units, time range, source, and annotations as separate text elements.
 - Preserve zero baselines for bars and square-root scaling for area marks.
 - Use deterministic demo data and mark it clearly as illustrative.
-- Treat exported SVG as a swappable chart compartment, not proof that every mark is independently editable in Canva.
+- Treat a scientific SVG/PDF export as one swappable vector chart compartment, keep its data and Matplotlib source with the rebuild files, and do not claim every mark is independently editable in Canva.
 
 ## Prompt Canva generation precisely
 

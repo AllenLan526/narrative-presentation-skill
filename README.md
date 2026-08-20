@@ -23,6 +23,7 @@ Open `demos/create-editable-zine-poster/design-as-layers.html` directly to inspe
 - Text placement follows an 8 px spacing system and rendered-ink clearances.
 - Normal text targets at least 4.5:1 contrast; small metadata targets 7:1 where practical.
 - Quantitative scenes preserve their declared Lieflat template and data contract.
+- Publication-ready static chart requests route to `$scientific-figure-making`; template-led narrative or interactive chart scenes remain with `$lieflat-charts`.
 - HTML supports reduced motion; PPTX documents honest static fallback behavior.
 - Posters retain live type, named modules, separately editable vector geometry, and a single clear visual route.
 - Poster credits and design-method sources remain outside the poster face.
