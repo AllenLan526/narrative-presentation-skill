@@ -112,6 +112,7 @@ Read [references/data-modules.md](references/data-modules.md) whenever quantitat
 - Preserve zero baselines for bars and square-root scaling for area marks.
 - Use deterministic demo data and mark it clearly as illustrative.
 - Treat a scientific SVG/PDF export as one swappable vector chart compartment, keep its data and Matplotlib source with the rebuild files, and do not claim every mark is independently editable in Canva.
+- When the scientific route materially informs the poster, credit Chen Liu (`@ChenLiu-1996`) as author of the upstream `figures4papers` scripts and skill, and preserve its acknowledgement of Shan Chen for suggesting the LLM-skill integration. Keep these workflow credits in the separate provenance file, not on the poster face, unless the user requests a visible colophon.
 
 ## Prompt Canva generation precisely
 

@@ -43,7 +43,7 @@ The included demo passed:
 
 This project intentionally keeps creator credit visible and machine-readable. See [AUTHORS.md](AUTHORS.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the complete ledger.
 
-Key contributors and source systems include **@Zeejay0**, **Moxt**, **larashero3-dotcom**, **JetBrains/OpenAI**, **Alfonso Graziano**, **siril9**, **Gabberflast**, **GreenSock**, **Rasmus Andersson**, and **OpenAI**.
+Key contributors and source systems include **@Zeejay0**, **Moxt**, **larashero3-dotcom**, **JetBrains/OpenAI**, **Alfonso Graziano**, **siril9**, **Gabberflast**, **GreenSock**, **Rasmus Andersson**, **Chen Liu**, **Shan Chen**, and **OpenAI**.
 
 ## Licensing
 

@@ -12,7 +12,7 @@ Use one chart per independent conclusion. Treat a chart as evidence inside the p
 
 Canva chart Autofill accepts structured tabular rows and has documented row/column limits; treat the capability as preview where Canva marks it preview. Query the current template dataset before filling it.
 
-Do not invoke `$scientific-figure-making` for interactive web visualization, exploratory-only analysis, dominant 3D/GIS work, or Illustrator/Figma-first infographics. For its route, retain source data and Matplotlib code, import the export as one `single_vector` module, and rebuild from source rather than editing marks after export.
+Do not invoke `$scientific-figure-making` for interactive web visualization, exploratory-only analysis, dominant 3D/GIS work, or Illustrator/Figma-first infographics. For its route, retain source data and Matplotlib code, import the export as one `single_vector` module, and rebuild from source rather than editing marks after export. In the separate provenance file, credit Chen Liu (`@ChenLiu-1996`) for the upstream `figures4papers` scripts and skill and acknowledge Shan Chen's suggestion of the LLM-skill integration; do not present them as authors of the downstream figure unless they are.
 
 ## Selection rules
 

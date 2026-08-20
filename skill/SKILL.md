@@ -98,7 +98,7 @@ Respect the source-handling, consent, privacy, no-photo, text, color-mode, gener
 
 Choose one primary chart engine per independent finding. Use `$scientific-figure-making` when the requested artifact is a publication-quality static Matplotlib figure; retain its data and source code, export SVG or PDF plus a high-DPI raster fallback when needed, and place the result as a named scene compartment. Use `$lieflat-charts` when a narrative template, staged reveal, or interactive relationship view is the communication method. Use native presentation charts only when element-level editability is more important and the encoding can be reproduced faithfully.
 
-Do not pass the same chart through multiple styling systems. Keep titles, units, time ranges, captions, and sources selectable when practical, but do not redraw or recolor scientific marks after export; revise the figure source and rebuild. Record `$scientific-figure-making` in `creator_credits` as an invoked production system. If its installed metadata does not declare a creator, record that status rather than inventing one.
+Do not pass the same chart through multiple styling systems. Keep titles, units, time ranges, captions, and sources selectable when practical, but do not redraw or recolor scientific marks after export; revise the figure source and rebuild. Record `$scientific-figure-making` in `creator_credits` as an invoked production system. Credit **Chen Liu (@ChenLiu-1996)** as the author of the upstream `figures4papers` scripts and skill, and preserve its acknowledgement of **Shan Chen** for suggesting the LLM-skill integration. Do not imply that either person authored a downstream dataset, analysis, or generated figure unless they did.
 
 ## Use Lieflat Charts for Data Scenes
 

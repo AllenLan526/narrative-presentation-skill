@@ -142,4 +142,4 @@ Every scene whose engine is `scientific-figure` must also include:
 }
 ```
 
-Include `svg` or `pdf` in `export_formats`. Keep the data, code, and exports traceable to one another. Add `$scientific-figure-making` to `creator_credits` as an invoked production system; when creator metadata is absent, record that it is not declared instead of inventing authorship.
+Include `svg` or `pdf` in `export_formats`. Keep the data, code, and exports traceable to one another. Add `$scientific-figure-making` to `creator_credits` as an invoked production system, crediting Chen Liu (`@ChenLiu-1996`) as the upstream author and preserving the Shan Chen acknowledgement for suggesting the LLM-skill integration. Keep those workflow credits distinct from authorship of the downstream data, analysis, and rendered figure.
