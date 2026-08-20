@@ -1,0 +1,12 @@
+{
+  "name": "create-editable-zine-poster-demo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Rebuild the editable HTML poster preview and vector PDF.",
+  "scripts": {
+    "render": "node render_html.cjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "format": {
+    "platform": "vector",
+    "design_type": "poster",
+    "route": "html-vector",
+    "orientation": "portrait",
+    "width": 1280,
+    "height": 1800
+  },
+  "poster": {
+    "title": "Design as Layers",
+    "audience": "Designers and content teams",
+    "purpose": "Demonstrate the create-editable-zine-poster skill on a self-referential modular poster",
+    "governing_message": "A poster can feel tactile without becoming a flat image",
+    "viewer_action": "Open the Canva design and move or rewrite one module"
+  },
+  "visual_anchor": {
+    "identity": "a torn vermilion seam",
+    "geometry": "one uninterrupted irregular vertical path",
+    "material": "one editable native paper-like shape",
+    "accent_hue": "#E4472E",
+    "continuity_rule": "the seam begins beside the title, passes through the exploded anatomy, and resolves beside the action line"
+  },
+  "spacing_system": {
+    "base_unit": 8,
+    "page_margin": 88,
+    "tight_gap": 16,
+    "regular_gap": 32,
+    "major_gap": 64,
+    "min_text_image_clearance": 32,
+    "peer_gap_tolerance_ratio": 1.25
+  },
+  "creator_credits": [
+    {
+      "work": "zine-anchor-deck",
+      "creator": "user-supplied local skill",
+      "usage": "visual anchor, quiet-space, compartment, and spacing method",
+      "location": "poster colophon and editable source",
+      "license_or_terms": "adaptation requested by the user"
+    },
+    {
+      "work": "Canva",
+      "creator": "Canva",
+      "usage": "editable poster generation and handoff",
+      "location": "editable source manifest",
+      "license_or_terms": "Canva account and platform terms apply"
+    }
+  ],
+  "modules": [
+    {
+      "id": "paper-field",
+      "role": "quiet background",
+      "kind": "shape",
+      "editability": "native_shape",
+      "owner_group": "g-background",
+      "bounds": {"x": 0, "y": 0, "w": 1280, "h": 1800},
+      "z": 0,
+      "content": "Warm paper #F3EFE6 with no full-page bitmap texture",
+      "alt_text": "Warm off-white paper field",
+      "source_note": "Original color specification",
+      "collision_exempt": true
+    },
+    {
+      "id": "eyebrow",
+      "role": "orientation",
+      "kind": "text",
+      "editability": "native_text",
+      "owner_group": "g-title",
+      "bounds": {"x": 88, "y": 88, "w": 560, "h": 44},
+      "bounds_basis": "rendered_ink",
+      "z": 30,
+      "content": "MODULAR POSTER / 01",
+      "alt_text": "Small poster series label",
+      "source_note": "Original demo copy"
+    },
+    {
+      "id": "title",
+      "role": "hook",
+      "kind": "text",
+      "editability": "native_text",
+      "owner_group": "g-title",
+      "bounds": {"x": 82, "y": 150, "w": 722, "h": 230},
+      "bounds_basis": "rendered_ink",
+      "z": 31,
+      "content": "DESIGN\nAS LAYERS",
+      "alt_text": "Large title reading Design as Layers",
+      "source_note": "Original demo copy"
+    },
+    {
+      "id": "subtitle",
+      "role": "promise",
+      "kind": "text",
+      "editability": "native_text",
+      "owner_group": "g-title",
+      "bounds": {"x": 88, "y": 420, "w": 546, "h": 76},
+      "bounds_basis": "rendered_ink",
+      "z": 31,
+      "content": "A one-page system that keeps the story\ntactile - and the parts movable.",
+      "alt_text": "Poster subtitle",
+      "source_note": "Original demo copy"
+    },
+    {
+      "id": "anchor-seam",
+      "role": "reading path and continuity anchor",
+      "kind": "shape",
+      "editability": "native_shape",
+      "owner_group": "g-anchor",
+      "bounds": {"x": 824, "y": 104, "w": 116, "h": 1550},
+      "z": 12,
+      "content": "One vermilion irregular seam #E4472E with no decorative side branches",
+      "alt_text": "A torn red seam runs through the poster",
+      "source_note": "Original geometry derived from the demo message",
+      "collision_zones": [
+        {"x": 868, "y": 78, "w": 85, "h": 1650}
+      ]
+    },
+    {
+      "id": "layer-stack",
+      "role": "dominant explanatory exhibit",
+      "kind": "group",
+      "editability": "native_group",
+      "owner_group": "g-layer-stack",
+      "bounds": {"x": 88, "y": 650, "w": 1008, "h": 640},
+      "z": 20,
+      "content": "Four unequal offset paper bands labeled MESSAGE, ANCHOR, EVIDENCE, and HANDOFF; each band uses separate native text and shapes",
+      "alt_text": "An exploded stack showing four editable poster layers",
+      "source_note": "Original self-describing diagram"
+    },
+    {
+      "id": "editability-ledger",
+      "role": "implementation proof",
+      "kind": "group",
+      "editability": "native_group",
+      "owner_group": "g-ledger",
+      "bounds": {"x": 88, "y": 1354, "w": 690, "h": 208},
+      "z": 26,
+      "content": "Four separate rows: LIVE TYPE, NATIVE SHAPES, DATA MODULE, SWAPPABLE IMAGE; label as MODULE LEDGER, not a chart",
+      "alt_text": "A four-row ledger naming editable module types",
+      "source_note": "Original demo copy; not quantitative data"
+    },
+    {
+      "id": "action-line",
+      "role": "conclusion and action",
+      "kind": "text",
+      "editability": "native_text",
+      "owner_group": "g-action",
+      "bounds": {"x": 985, "y": 1368, "w": 205, "h": 200},
+      "bounds_basis": "rendered_ink",
+      "z": 32,
+      "content": "MOVE ONE\nPIECE.\nTHE STORY\nSTILL HOLDS.",
+      "alt_text": "Conclusion inviting the viewer to move a module",
+      "source_note": "Original demo copy"
+    },
+    {
+      "id": "edition-marker",
+      "role": "functional poster identifier",
+      "kind": "text",
+      "editability": "native_text",
+      "owner_group": "g-edition",
+      "bounds": {"x": 88, "y": 1680, "w": 300, "h": 40},
+      "bounds_basis": "rendered_ink",
+      "z": 35,
+      "content": "01 / MODULAR DEMO",
+      "alt_text": "Poster edition marker",
+      "source_note": "Original functional poster copy; design provenance is stored in credits-and-sources.md"
+    }
+  ],
+  "owned_text_shape_contracts": [
+    {
+      "id": "band-message",
+      "shape_id": "band-message-shape",
+      "text_ids": ["band-message-title", "band-message-class", "band-message-note"],
+      "shape_rotation_degrees": 0,
+      "text_rotation_degrees": 0,
+      "shape_height": 112,
+      "text_stack_height": 60,
+      "padding": {"left": 46, "right": 46, "top": 26, "bottom": 26}
+    },
+    {
+      "id": "band-anchor",
+      "shape_id": "band-anchor-shape",
+      "text_ids": ["band-anchor-title", "band-anchor-class", "band-anchor-note"],
+      "shape_rotation_degrees": 0,
+      "text_rotation_degrees": 0,
+      "shape_height": 112,
+      "text_stack_height": 60,
+      "padding": {"left": 36, "right": 36, "top": 26, "bottom": 26}
+    },
+    {
+      "id": "band-evidence",
+      "shape_id": "band-evidence-shape",
+      "text_ids": ["band-evidence-title", "band-evidence-class", "band-evidence-note"],
+      "shape_rotation_degrees": 0,
+      "text_rotation_degrees": 0,
+      "shape_height": 128,
+      "text_stack_height": 66,
+      "padding": {"left": 56, "right": 52, "top": 28, "bottom": 34}
+    },
+    {
+      "id": "band-handoff",
+      "shape_id": "band-handoff-shape",
+      "text_ids": ["band-handoff-title", "band-handoff-class", "band-handoff-note"],
+      "shape_rotation_degrees": 0,
+      "text_rotation_degrees": 0,
+      "shape_height": 116,
+      "text_stack_height": 60,
+      "padding": {"left": 62, "right": 56, "top": 30, "bottom": 26}
+    }
+  ],
+  "spacing_exceptions": [
+    {
+      "relation": "the vermilion seam approaches the right edge of the title more closely than the major gap",
+      "purpose": "create a deliberate handoff from the title into the central reading path without touching the letterforms"
+    }
+  ]
+}

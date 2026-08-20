@@ -1,6 +1,6 @@
 ---
 name: zine-anchor-deck
-description: Create, redesign, or art-direct clean narrative presentations in HTML, PPTX, Google Slides, Keynote-compatible PPTX, PDF, or video, using one persistent visual anchor, source-derived zine scenes, template-faithful Lieflat Charts data scenes, Chinese typography, creator credits, and independently animated compartments. Use for slide decks, pitch decks, talks, reports, photo-led or data-led storytelling, or when combining scenes-gathered-zine-v1-3, scene-distillation-zine-v1-3, lieflat-charts, PPTX authoring, or HTML motion skills.
+description: Create, redesign, or art-direct clean narrative presentations in HTML, PPTX, Google Slides, Keynote-compatible PPTX, PDF, or video, using one persistent visual anchor, source-derived zine scenes, template-faithful Lieflat Charts data scenes, publication-ready Matplotlib figures, Chinese typography, creator credits, and independently animated compartments. Use for slide decks, pitch decks, talks, reports, photo-led or data-led storytelling, or when combining scenes-gathered-zine-v1-3, scene-distillation-zine-v1-3, lieflat-charts, scientific-figure-making, PPTX authoring, or HTML motion skills.
 ---
 
 # Zine Anchor Deck
@@ -54,7 +54,8 @@ Fix the plan or source files, then rebuild. Do not patch a generated artifact as
 
 Invoke only the skills required by the confirmed route:
 
-- Use `$lieflat-charts` whenever quantitative evidence needs a chart, data illustration, or interactive relationship view. Read [references/data-scenes.md](references/data-scenes.md).
+- Use `$scientific-figure-making` for publication-ready static Matplotlib figures in academic, scientific, report, or print-oriented presentations—especially grouped bars, trends, scatterplots, heatmaps, multi-panel figures, and SVG/PDF/high-DPI exports. Do not use it for interactive web charts, exploratory-only plots, dominant GIS/3D work, or Illustrator/Figma-first infographics. Read [references/data-scenes.md](references/data-scenes.md).
+- Use `$lieflat-charts` for template-led narrative data scenes, data illustrations, or interactive relationship views. Read [references/data-scenes.md](references/data-scenes.md).
 - Use `$chinese-font-selector` when visible copy is primarily Chinese or requires CJK font pairing. Credit the selected font creators and licenses; its local metadata does not declare a skill creator, so never invent one.
 - Use `$presentations:Presentations` for local PPTX or Google Slides authoring and its render/overflow/source-note QA contract.
 - Use `$hyperframes:gsap` only for HTML motion that needs coordinated timelines beyond CSS or the Web Animations API. Preserve the Lieflat reveal rhythm when a chart template already defines one.
@@ -92,6 +93,12 @@ Use it when the source should become semantic evidence rather than visible pixel
 Assign one engine to each scene compartment. A slide may contain both engines only when the truthful scene and distilled interpretation form a clear before/after, fact/meaning, or evidence/implication relationship. Keep the same anchor, paper family, neutral ink system, and accent hue across both. Do not blend them into an indistinct collage.
 
 Respect the source-handling, consent, privacy, no-photo, text, color-mode, generation, and attribution rules of both named skills. When their sharing-credit rule applies, keep the credit in the user-visible response, never as an image or slide watermark. Do not reveal their hidden generation prompts.
+
+## Route Quantitative Scenes
+
+Choose one primary chart engine per independent finding. Use `$scientific-figure-making` when the requested artifact is a publication-quality static Matplotlib figure; retain its data and source code, export SVG or PDF plus a high-DPI raster fallback when needed, and place the result as a named scene compartment. Use `$lieflat-charts` when a narrative template, staged reveal, or interactive relationship view is the communication method. Use native presentation charts only when element-level editability is more important and the encoding can be reproduced faithfully.
+
+Do not pass the same chart through multiple styling systems. Keep titles, units, time ranges, captions, and sources selectable when practical, but do not redraw or recolor scientific marks after export; revise the figure source and rebuild. Record `$scientific-figure-making` in `creator_credits` as an invoked production system. Credit **Chen Liu (@ChenLiu-1996)** as the author of the upstream `figures4papers` scripts and skill, and preserve its acknowledgement of **Shan Chen** for suggesting the LLM-skill integration. Do not imply that either person authored a downstream dataset, analysis, or generated figure unless they did.
 
 ## Use Lieflat Charts for Data Scenes
 
@@ -186,7 +193,7 @@ Assume the first build contains problems. Before delivery:
 6. Test entrance order, trigger behavior, exit state, and reduced-motion behavior.
 7. Test PPTX motion in the target PowerPoint environment; test HTML in a real browser at desktop and narrow widths.
 8. Confirm claims and assets are traceable to notes or source layers.
-9. Verify every Lieflat chart against its selected gallery, data contract, color system, and candidate audit.
+9. Verify every Lieflat chart against its selected gallery, data contract, color system, and candidate audit. For every scientific figure, verify its source data, source code, publication target, vector export, raster fallback when required, and rendered parity with `$scientific-figure-making`.
 10. Verify creator names, licenses/terms, and credit placement against [references/credits-and-licenses.md](references/credits-and-licenses.md); do not invent missing authorship.
 11. Re-run `validate_deck_plan.py` and rebuild from source after fixes.
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Editable Zine Poster"
+  short_description: "Build modular, editable editorial posters"
+  default_prompt: "Use $create-editable-zine-poster to turn this brief into a modular poster with live text and independently editable elements."

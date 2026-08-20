@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1280, initial-scale=1">
+  <title>Design as Layers - Modular Poster Demo</title>
+  <style>
+    :root {
+      --paper: #f3efe6;
+      --paper-light: #fffdf7;
+      --ink: #1c1b1a;
+      --accent: #e4472e;
+      --page-w: 1280px;
+      --page-h: 1800px;
+      --tight: 16px;
+      --clearance: 32px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: var(--page-w); height: var(--page-h); background: var(--paper); }
+    body { font-family: Arial, Helvetica, sans-serif; color: var(--ink); }
+    .poster {
+      position: relative;
+      width: var(--page-w);
+      height: var(--page-h);
+      overflow: hidden;
+      background: var(--paper);
+      isolation: isolate;
+    }
+    .module { position: absolute; }
+    .title-stack { left: 82px; top: 88px; width: 760px; z-index: 30; }
+    .eyebrow { display: inline-block; margin-left: 6px; font-size: 24px; line-height: 1; font-weight: 800; letter-spacing: 4px; }
+    h1 { display: inline-block; margin: 55px 0 0; font-size: 126px; line-height: .94; letter-spacing: -6px; font-weight: 900; }
+    .subtitle { margin: 42px 0 0 6px; width: 570px; font-size: 31px; line-height: 1.28; letter-spacing: .5px; }
+
+    .anchor-svg { left: 68px; top: 78px; width: 1128px; height: 1650px; z-index: 10; overflow: visible; }
+    .anchor-svg path, .anchor-svg polygon { fill: var(--accent); }
+
+    .anatomy-label { left: 88px; top: 598px; z-index: 25; font-size: 21px; line-height: 1; font-weight: 800; letter-spacing: 3px; }
+    .band { z-index: 20; color: var(--ink); }
+    .band .band-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .band .band-content { position: absolute; inset: 0; }
+    .band .band-title { position: absolute; font-size: 36px; line-height: 1; font-weight: 900; }
+    .band .band-class { position: absolute; font-size: 22px; line-height: 1; font-weight: 700; text-align: right; }
+    .band .band-note { position: absolute; font-size: 15px; line-height: 1; font-weight: 800; letter-spacing: 2px; white-space: nowrap; }
+
+    .band-message { left: 78px; top: 660px; width: 716px; height: 112px; }
+    .band-message .band-title { left: 72px; top: 26px; }
+    .band-message .band-class { right: 74px; top: 29px; }
+    .band-message .band-note { left: 72px; top: 74px; }
+
+    .band-anchor { left: 76px; top: 788px; width: 756px; height: 112px; color: var(--paper-light); }
+    .band-anchor .band-title { left: 80px; top: 26px; }
+    .band-anchor .band-class { right: 62px; top: 29px; }
+    .band-anchor .band-note { left: 80px; top: 74px; }
+
+    .band-evidence { left: 68px; top: 924px; width: 756px; height: 128px; color: var(--paper); }
+    .band-evidence .band-title { left: 92px; top: 28px; }
+    .band-evidence .band-class { right: 74px; top: 31px; }
+    .band-evidence .band-note { left: 92px; top: 82px; }
+
+    .band-handoff { left: 72px; top: 1074px; width: 774px; height: 116px; }
+    .band-handoff .band-title { left: 88px; top: 30px; }
+    .band-handoff .band-class { right: 86px; top: 33px; }
+    .band-handoff .band-note { left: 88px; top: 78px; }
+
+    .ledger { left: 88px; top: 1315px; width: 622px; z-index: 30; }
+    .section-label { font-size: 21px; font-weight: 800; letter-spacing: 3px; }
+    .ledger-rule { height: 3px; margin-top: 18px; background: var(--ink); }
+    .ledger-row { display: grid; grid-template-columns: 20px 330px 1fr; align-items: center; column-gap: 22px; height: 50px; }
+    .ledger-row:first-of-type { margin-top: 14px; }
+    .ledger-dot { width: 20px; height: 20px; background: var(--accent); }
+    .ledger-name { font-size: 24px; font-weight: 800; letter-spacing: 2px; }
+    .ledger-action { font-size: 18px; font-weight: 800; letter-spacing: 2px; }
+
+    .action { left: 985px; top: 1368px; width: 215px; z-index: 30; }
+    .action .section-label { font-size: 19px; }
+    .action-copy { margin-top: 19px; font-size: 30px; line-height: 1.33; font-weight: 900; letter-spacing: 1px; }
+
+    .edition { left: 88px; right: 88px; top: 1658px; z-index: 30; border-top: 3px solid var(--ink); padding-top: 28px; font-size: 17px; font-weight: 800; letter-spacing: 1.4px; }
+
+    .audit-zone { position: absolute; opacity: 0; pointer-events: none; z-index: -1; }
+    .zone-vertical { left: 868px; top: 78px; width: 85px; height: 1650px; }
+
+    @page { size: 1280px 1800px; margin: 0; }
+    @media print {
+      html, body { width: 1280px; height: 1800px; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .poster { break-after: page; }
+    }
+  </style>
+</head>
+<body>
+  <main class="poster" data-document-role="page" data-label="Design as Layers">
+    <header class="module title-stack" data-module-id="title-stack">
+      <div class="eyebrow" data-module-id="eyebrow" data-audit-text>MODULAR POSTER / 01</div>
+      <h1 data-module-id="title" data-audit-text>DESIGN<br>AS LAYERS</h1>
+      <p class="subtitle" data-module-id="subtitle" data-audit-text>A one-page system that keeps the story<br>tactile - and the parts movable.</p>
+    </header>
+
+    <svg class="module anchor-svg" data-module-id="anchor-seam" viewBox="68 78 1128 1650" aria-label="Torn vermilion seam">
+      <path d="M878 78 L928 88 L913 224 L943 342 L919 514 L946 641 L917 828 L951 1008 L924 1186 L953 1372 L927 1548 L947 1718 L888 1728 L905 1560 L879 1378 L902 1196 L872 1016 L900 832 L868 646 L896 510 L871 338 L900 220 Z"/>
+    </svg>
+
+    <div class="module anatomy-label" data-module-id="anatomy-label">EXPLODED POSTER ANATOMY</div>
+
+    <section class="module band band-message" data-module-id="band-message" data-owned-band data-safe-left="46" data-safe-right="46" data-safe-top="26" data-safe-bottom="26">
+      <svg class="band-bg" viewBox="0 0 716 112" preserveAspectRatio="none"><polygon points="10,0 682,0 716,40 688,112 26,112 0,50" fill="#fffdf7" stroke="#1c1b1a" stroke-width="4"/></svg>
+      <div class="band-content">
+        <div class="band-title owned-text">MESSAGE</div>
+        <div class="band-class owned-text">LIVE TYPE</div>
+        <div class="band-note owned-text">01 / WHAT THE VIEWER REMEMBERS</div>
+      </div>
+    </section>
+
+    <section class="module band band-anchor" data-module-id="band-anchor" data-owned-band data-safe-left="36" data-safe-right="36" data-safe-top="26" data-safe-bottom="26">
+      <svg class="band-bg" viewBox="0 0 756 112" preserveAspectRatio="none"><polygon points="44,0 756,0 730,112 28,112 0,56" fill="#e4472e"/></svg>
+      <div class="band-content">
+        <div class="band-title owned-text">ANCHOR</div>
+        <div class="band-class owned-text">NATIVE SHAPE</div>
+        <div class="band-note owned-text">02 / THE RELATION THAT HOLDS IT TOGETHER</div>
+      </div>
+    </section>
+
+    <section class="module band band-evidence" data-module-id="band-evidence" data-owned-band data-safe-left="56" data-safe-right="52" data-safe-top="28" data-safe-bottom="34">
+      <svg class="band-bg" viewBox="0 0 756 128" preserveAspectRatio="none"><polygon points="16,0 718,0 756,42 734,128 36,128 0,86" fill="#1c1b1a"/></svg>
+      <div class="band-content">
+        <div class="band-title owned-text">EVIDENCE</div>
+        <div class="band-class owned-text">DATA / IMAGE</div>
+        <div class="band-note owned-text">03 / THE THING THAT MAKES IT TRUE</div>
+      </div>
+    </section>
+
+    <section class="module band band-handoff" data-module-id="band-handoff" data-owned-band data-safe-left="62" data-safe-right="56" data-safe-top="30" data-safe-bottom="26">
+      <svg class="band-bg" viewBox="0 0 774 116" preserveAspectRatio="none"><polygon points="38,0 774,0 744,116 26,116 0,48" fill="#fffdf7" stroke="#1c1b1a" stroke-width="4"/></svg>
+      <div class="band-content">
+        <div class="band-title owned-text">HANDOFF</div>
+        <div class="band-class owned-text">SOURCE + ACTION</div>
+        <div class="band-note owned-text">04 / WHERE THE VIEWER CAN KEEP WORKING</div>
+      </div>
+    </section>
+
+    <section class="module ledger" data-module-id="module-ledger">
+      <div class="section-label">MODULE LEDGER</div><div class="ledger-rule"></div>
+      <div class="ledger-row"><i class="ledger-dot"></i><span class="ledger-name">LIVE TYPE</span><span class="ledger-action">REWRITE</span></div>
+      <div class="ledger-row"><i class="ledger-dot"></i><span class="ledger-name">NATIVE SHAPES</span><span class="ledger-action">MOVE / RECOLOR</span></div>
+      <div class="ledger-row"><i class="ledger-dot"></i><span class="ledger-name">DATA MODULE</span><span class="ledger-action">REMAP</span></div>
+      <div class="ledger-row"><i class="ledger-dot"></i><span class="ledger-name">SWAPPABLE IMAGE</span><span class="ledger-action">REPLACE</span></div>
+    </section>
+
+    <section class="module action" data-module-id="action-line" data-audit-text>
+      <div class="section-label">THE TEST</div>
+      <div class="action-copy">MOVE ONE<br>PIECE.<br>THE STORY<br>STILL HOLDS.</div>
+    </section>
+    <footer class="module edition" data-module-id="edition-marker"><span data-module-id="edition-text" data-audit-text>01 / MODULAR DEMO</span></footer>
+
+    <i class="audit-zone zone-vertical"></i>
+  </main>
+  <script>
+    window.posterAudit = async function posterAudit() {
+      await document.fonts.ready;
+      const errors = [];
+      const clearance = 32;
+      const page = document.querySelector('.poster').getBoundingClientRect();
+      const zones = [...document.querySelectorAll('.audit-zone')].map(el => el.getBoundingClientRect());
+      const intersects = (a, b, p = 0) => a.left - p < b.right && a.right + p > b.left && a.top - p < b.bottom && a.bottom + p > b.top;
+
+      for (const el of document.querySelectorAll('[data-audit-text]')) {
+        const rect = el.getBoundingClientRect();
+        if (zones.some(zone => intersects(rect, zone, clearance))) errors.push(`${el.dataset.moduleId} violates ${clearance}px anchor clearance`);
+      }
+      for (const band of document.querySelectorAll('[data-owned-band]')) {
+        const bandRect = band.getBoundingClientRect();
+        const rects = [...band.querySelectorAll('.owned-text')].map(el => el.getBoundingClientRect());
+        const union = {
+          left: Math.min(...rects.map(r => r.left)), right: Math.max(...rects.map(r => r.right)),
+          top: Math.min(...rects.map(r => r.top)), bottom: Math.max(...rects.map(r => r.bottom))
+        };
+        const pads = { left: union.left - bandRect.left, right: bandRect.right - union.right, top: union.top - bandRect.top, bottom: bandRect.bottom - union.bottom };
+        for (const side of ['left','right','top','bottom']) if (pads[side] < 16) errors.push(`${band.dataset.moduleId} ${side} inset below 16px`);
+        if (Math.max(pads.left, pads.right) / Math.min(pads.left, pads.right) > 1.5) errors.push(`${band.dataset.moduleId} left/right insets are unbalanced`);
+        if (Math.max(pads.top, pads.bottom) / Math.min(pads.top, pads.bottom) > 1.5) errors.push(`${band.dataset.moduleId} top/bottom insets are unbalanced`);
+        if ((union.bottom - union.top) / bandRect.height > .7) errors.push(`${band.dataset.moduleId} text stack exceeds 70% of shape height`);
+        if (getComputedStyle(band.querySelector('.band-bg')).transform !== getComputedStyle(band.querySelector('.band-content')).transform) errors.push(`${band.dataset.moduleId} background/text transforms differ`);
+      }
+      for (const el of document.querySelectorAll('[data-module-id]')) {
+        const r = el.getBoundingClientRect();
+        if (r.left < page.left - .5 || r.top < page.top - .5 || r.right > page.right + .5 || r.bottom > page.bottom + .5) errors.push(`${el.dataset.moduleId} overflows page`);
+      }
+      return { ok: errors.length === 0, errors };
+    };
+  </script>
+</body>
+</html>

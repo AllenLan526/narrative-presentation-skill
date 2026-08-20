@@ -34,3 +34,13 @@ Inter is by **Rasmus Andersson** and is licensed under the SIL Open Font License
 ## OpenAI
 
 The demonstration's original illustrations were created with OpenAI image generation. The PowerPoint was authored through OpenAI Presentations using `@oai/artifact-tool`.
+
+## Editable poster research references
+
+The poster skill cites official Canva developer documentation and public poster/chart projects including PosterLLaVA, Grid2Poster, Observable Plot, RAWGraphs, and Charticulator as research references. No code, templates, artwork, or datasets from those projects are bundled into the poster demonstration. Observable Plot identifies its repository license as ISC; all other upstream projects and services retain their own terms.
+
+## Scientific Figure Making and figures4papers
+
+The optional `$scientific-figure-making` route is derived from the [`figures4papers`](https://github.com/ChenLiu-1996/figures4papers) repository and skill by **[Chen Liu (@ChenLiu-1996)](https://github.com/ChenLiu-1996)**. The upstream README acknowledges **[Shan Chen](https://shanchen.dev/)** for suggesting the LLM-skill integration.
+
+No `figures4papers` code, datasets, or figure assets are bundled here. GitHub reports no detected repository license for `figures4papers`; treat it as a referenced workflow unless separate reuse terms are provided. Credit Chen Liu and preserve the Shan Chen acknowledgement when this route materially informs a deliverable. Do not attribute a user's downstream analysis or generated figure to either person unless they actually authored it.
